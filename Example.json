@@ -1,0 +1,99 @@
+{
+    "ALBUM": "MixTape 01",
+    "ARTIST": "Various Artists",
+    "ALBUMARTIST": "Various Artists",
+    "MUSICBRAINZ_ALBUMARTIST": "Various Artists",
+    "GENRE": "None",
+    "Songs": {
+        "01":{
+            "TRACKNUMBER": 1,
+            "ARTIST": "Greatful Dead",
+            "TITLE": "Sugar Magnolia"
+        },
+        "02":{
+            "TRACKNUMBER": 2,
+            "ARTIST": "The Beatles",
+            "TITLE": "Twist and Shout"
+        },
+        "03":{
+            "TRACKNUMBER": 3,
+            "ARTIST": "Radiohead",
+            "TITLE": "Lift"
+        },
+        "04":{
+            "TRACKNUMBER": 4,
+            "ARTIST": "John Lennon & Yoko Ono",
+            "TITLE": "Give Peace a Chance"
+        },
+        "05":{
+            "TRACKNUMBER": 5,
+            "ARTIST": "Greatful Dead",
+            "TITLE": "The Golden Road"
+        },
+        "06":{
+            "TRACKNUMBER": 6,
+            "ARTIST": "Elliot Smith",
+            "TITLE": "Somebody That I Used To Know"
+        },
+        "07":{
+            "TRACKNUMBER": 7,
+            "ARTIST": "Radiohead",
+            "TITLE": "Blow Out"
+        },
+        "08":{
+            "TRACKNUMBER": 8,
+            "ARTIST": "Greatful Dead",
+            "TITLE": "Casey Jones"
+        },
+        "09":{
+            "TRACKNUMBER": 9,
+            "ARTIST": "The Beatles",
+            "TITLE": "Revolution"
+        },
+        "10":{
+            "TRACKNUMBER": 10,
+            "ARTIST": "The Dave Brubeck Quartet",
+            "TITLE": "Take Five"
+        },
+        "11":{
+            "TRACKNUMBER": 11,
+            "ARTIST": "Radiohead",
+            "TITLE": "Idioteque"
+        },
+        "12":{
+            "TRACKNUMBER": 12,
+            "ARTIST": "Radiohead",
+            "TITLE": "The National Anthem"
+        },
+        "13":{
+            "TRACKNUMBER": 13,
+            "ARTIST": "John Lennon & Yoko Ono",
+            "TITLE": "Imagine"
+        },
+        "14":{
+            "TRACKNUMBER": 14,
+            "ARTIST": "The Beatles",
+            "TITLE": "In My Life"
+        },
+        "15":{
+            "TRACKNUMBER": 15,
+            "ARTIST": "Greatful Dead",
+            "TITLE": "Uncle John's Band"
+        },
+        "16":{
+            "TRACKNUMBER": 16,
+            "ARTIST": "The Buggles",
+            "TITLE": "Video Killed the Radio Star"
+        },
+        "17":{
+            "TRACKNUMBER": 17,
+            "ARTIST": "Soul Coughing",
+            "TITLE": "Soft Serve"
+        },
+        "18":{
+            "TRACKNUMBER": 18,
+            "ARTIST": "John Lennon & Yoko Ono",
+            "TITLE": "Watching the Wheels"
+        }
+    }
+}
