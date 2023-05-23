@@ -21,13 +21,11 @@ with open(json_file) as f:
    data = json.load(f)
    print(data)
 
-#file = '/Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa MixTape 01/02 - Track 2.flac'
 mixtape_bool = args['mixtape']
 
 def mod_song_meta_data(data: dict, file: str, mixtape_bool: bool):
     file_name = file.split('/')[-1]
     track_number = file_name.split(' - ')[0]
-    print(file_name)
     print(data['Songs'][track_number]['ARTIST'])
 
     #Album
@@ -132,10 +130,11 @@ for i in glob.glob(flac_dir + '*.flac'):
     file_name = i.split('/')[-1]
     print(file_name)
     new_files.append(mod_song_meta_data(data, i, mixtape_bool))
+    print(new_files[-1])
 
 
 
-
+# Command line example check that the renameing worked. Could fold into a check.
 #!ls /Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa\ MixTape\ 01/
 
 #!metaflac --list /Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa\ MixTape\ 01/15\ -\ Uncle\ John\'s\ Band.flac | grep comment
