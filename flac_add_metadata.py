@@ -1,16 +1,28 @@
+#!/usr/bin/env python3
+import argparse
 import json
 import os
 import subprocess
 import glob
 
+parser = argparse.ArgumentParser()
 
+parser.add_argument('--json', type=str, required=True)
+parser.add_argument('--dir', type=str, required=True)
+parser.add_argument('--mixtape', default=False, type=bool, required=False)
 
-json_file = "/Users/jcorwin/Desktop/MusicTemp/json_files/Lisa MixTape 01.json"
+args = vars(parser.parse_args())
+
+print(args)
+
+json_file = args['json']
+print(json_file)
 with open(json_file) as f:
    data = json.load(f)
+   print(data)
 
-file = '/Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa MixTape 01/02 - Track 2.flac'
-mixtape_bool = True
+#file = '/Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa MixTape 01/02 - Track 2.flac'
+mixtape_bool = args['mixtape']
 
 def mod_song_meta_data(data: dict, file: str, mixtape_bool: bool):
     file_name = file.split('/')[-1]
@@ -112,7 +124,7 @@ def mod_song_meta_data(data: dict, file: str, mixtape_bool: bool):
     return file_new #Could add a dictionary of subprocess outs.
 
 
-flac_dir = '/Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa MixTape 01/'
+flac_dir =  args['dir']
 mixtape_bool = True
 
 new_files = []
