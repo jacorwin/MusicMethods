@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+
 import argparse
 import json
 import os
 import subprocess
 import glob
 
+# Parse Arguements and print
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--json', type=str, required=True)
@@ -13,20 +15,24 @@ parser.add_argument('--mixtape', default=False, type=bool, required=False)
 
 args = vars(parser.parse_args())
 
-print(args)
-
 json_file = args['json']
-print(json_file)
+flac_dir =  args['dir']
+mixtape_bool = args['mixtape']
+print('\n')
+print(flac_dir)
+print('\t' + json_file.split('/')[-1])
+print('\t' + str(mixtape_bool))
+print('\n')
+
 with open(json_file) as f:
    data = json.load(f)
-   print(data)
 
-mixtape_bool = args['mixtape']
 
+# Core fuction
 def mod_song_meta_data(data: dict, file: str, mixtape_bool: bool):
     file_name = file.split('/')[-1]
     track_number = file_name.split(' - ')[0]
-    print(data['Songs'][track_number]['ARTIST'])
+    print('\t' + data['Songs'][track_number]['ARTIST'])
 
     #Album
     tag_album = data['ALBUM']
@@ -122,15 +128,13 @@ def mod_song_meta_data(data: dict, file: str, mixtape_bool: bool):
     return file_new #Could add a dictionary of subprocess outs.
 
 
-flac_dir =  args['dir']
-mixtape_bool = True
-
+# Loop through files
 new_files = []
 for i in glob.glob(flac_dir + '*.flac'):
     file_name = i.split('/')[-1]
     print(file_name)
     new_files.append(mod_song_meta_data(data, i, mixtape_bool))
-    print(new_files[-1])
+    print('\t' + new_files[-1].split('/')[-1])
 
 
 
