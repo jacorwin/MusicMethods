@@ -139,8 +139,8 @@ for i in glob.glob(flac_dir + '*.flac'):
 
 
 # Command line example check that the renameing worked. Could fold into a check.
-#!ls /Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa\ MixTape\ 01/
+#ls /Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa\ MixTape\ 01/
 
-#!metaflac --list /Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa\ MixTape\ 01/15\ -\ Uncle\ John\'s\ Band.flac | grep comment
+#metaflac --list /Users/jcorwin/Desktop/MusicTemp/MixTapes/Lisa\ MixTape\ 01/15\ -\ Uncle\ John\'s\ Band.flac | grep comment
 
 
